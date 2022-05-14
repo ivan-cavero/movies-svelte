@@ -1,6 +1,6 @@
 <script>
-	import MovieCard from './MovieCard.svelte'
-	
+	import MovieCard from './MovieCard.svelte';
+
 	export let popular;
 	console.log(popular[1]);
 </script>
