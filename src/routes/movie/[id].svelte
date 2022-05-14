@@ -26,6 +26,10 @@
 	export let movieDetail;
 </script>
 
+<svelte:head>
+  <title>Movie: {movieDetail.title}</title>
+</svelte:head>
+
 <div
 	class="movie-details"
 	in:fly={{ y: 50, duration: 500, delay: 500 }}

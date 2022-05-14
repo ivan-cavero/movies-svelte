@@ -28,6 +28,10 @@
 	export let popular;
 </script>
 
+<svelte:head>
+	<title>Movies - Svelte</title>
+</svelte:head>
+
 <section in:fly={{ y: 50, duration: 500, delay: 500 }} out:fly={{ duration: 500 }}>
 	<SearchMovies />
 	<PopularMovies {popular} />
