@@ -9,7 +9,7 @@
 		console.log(data);
 		if (res.ok) {
 			return {
-				props: { popular: data.results }
+				props: { popular: data.results, page: data.page }
 			};
 		} else {
 			return {
@@ -26,6 +26,7 @@
 	import { fly } from 'svelte/transition';
 
 	export let popular;
+	export let page;
 </script>
 
 <svelte:head>
@@ -34,5 +35,5 @@
 
 <section in:fly={{ y: 50, duration: 500, delay: 500 }} out:fly={{ duration: 500 }}>
 	<SearchMovies />
-	<PopularMovies {popular} />
+	<PopularMovies {popular} {page} />
 </section>

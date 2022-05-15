@@ -2,7 +2,7 @@
 	import MovieCard from './MovieCard.svelte';
 
 	export let popular;
-	console.log(popular[1]);
+	export let page;
 </script>
 
 <h1>Popular Movies</h1>
@@ -10,6 +10,7 @@
 	{#each popular as movie}
 		<MovieCard {movie} />
 	{/each}
+	<span>{page}</span>
 </div>
 
 <style>
